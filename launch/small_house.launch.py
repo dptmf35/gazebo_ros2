@@ -37,13 +37,14 @@ def generate_launch_description():
         additional_env={'GAZEBO_MODEL_PATH': gazebo_model_path}  # 클라이언트에도 모델 경로 추가
     )
 
-    # TurtleBot3 스폰
+    # TurtleBot3 스폰 - 로봇 스테이션 앞에 위치하도록 변경
     spawn_turtlebot = Node(
         package='gazebo_ros',
         executable='spawn_entity.py',
         arguments=[
             '-entity', 'turtlebot3_burger',
-            '-x', '0', '-y', '0', '-z', '0.5',
+            '-x', '9.0', '-y', '0.8', '-z', '0.01', 
+            '-R', '0', '-P', '0', '-Y', '1.57',
             '-file', '/opt/ros/humble/share/turtlebot3_gazebo/models/turtlebot3_burger/model.sdf'
         ],
         output='screen'

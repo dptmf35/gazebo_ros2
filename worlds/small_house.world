@@ -638,7 +638,7 @@
             <collision name='collision'>
                 <geometry>
                     <box>
-                        <size>0.3 0.15 0.1</size>
+                        <size>0.85 0.25 0.65</size>
                     </box>
                 </geometry>
             </collision>
@@ -647,7 +647,7 @@
             <visual name='base'>
                 <geometry>
                     <box>
-                        <size>0.3 0.15 0.02</size>
+                        <size>0.85 0.25 0.03</size>
                     </box>
                 </geometry>
                 <material>
@@ -660,10 +660,10 @@
             
             <!-- 경사로 -->
             <visual name='ramp'>
-                <pose>-0.08 0 0.025 0.2 0 0</pose>
+                <pose>-0.12 0 0.04 0.2 0 0</pose>
                 <geometry>
                     <box>
-                        <size>0.12 0.15 0.01</size>
+                        <size>0.18 0.25 0.015</size>
                     </box>
                 </geometry>
                 <material>
@@ -676,10 +676,10 @@
             
             <!-- 메인 바디 -->
             <visual name='main_body'>
-                <pose>0.08 0 0.06 0 0 0</pose>
+                <pose>0.12 0 0.09 0 0 0</pose>
                 <geometry>
                     <box>
-                        <size>0.1 0.15 0.1</size>
+                        <size>0.15 0.25 0.15</size>
                     </box>
                 </geometry>
                 <material>
@@ -690,13 +690,45 @@
                 </material>
             </visual>
             
+            <!-- 기둥 -->
+            <visual name='pillar'>
+                <pose>0.12 0 0.35 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.05 0.05 0.5</size>
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/Grey</name>
+                    </script>
+                </material>
+            </visual>
+            
+            <!-- 상단 박스 -->
+            <visual name='top_box'>
+                <pose>0.12 0 0.6 0 0 0</pose>
+                <geometry>
+                    <box>
+                        <size>0.15 0.15 0.1</size>
+                    </box>
+                </geometry>
+                <material>
+                    <script>
+                        <uri>file://media/materials/scripts/gazebo.material</uri>
+                        <name>Gazebo/White</name>
+                    </script>   
+                </material>
+            </visual>
+            
             <!-- 충전 접점 1 -->
             <visual name='contact_left'>
-                <pose>0.05 0.03 0.015 0 0 0</pose>
+                <pose>-0.08 0.05 0.025 0 0 0</pose>
                 <geometry>
                     <cylinder>
-                        <radius>0.005</radius>
-                        <length>0.01</length>
+                        <radius>0.008</radius>
+                        <length>0.015</length>
                     </cylinder>
                 </geometry>
                 <material>
@@ -709,11 +741,11 @@
             
             <!-- 충전 접점 2 -->
             <visual name='contact_right'>
-                <pose>0.05 -0.03 0.015 0 0 0</pose>
+                <pose>-0.08 -0.05 0.025 0 0 0</pose>
                 <geometry>
                     <cylinder>
-                        <radius>0.005</radius>
-                        <length>0.01</length>
+                        <radius>0.008</radius>
+                        <length>0.015</length>
                     </cylinder>
                 </geometry>
                 <material>
@@ -726,10 +758,10 @@
             
             <!-- 상태 표시등 -->
             <visual name='status_light'>
-                <pose>0.08 0 0.115 0 0 0</pose>
+                <pose>0.12 0 0.65 0 0 0</pose>
                 <geometry>
                     <sphere>
-                        <radius>0.01</radius>
+                        <radius>0.015</radius>
                     </sphere>
                 </geometry>
                 <material>
@@ -743,10 +775,10 @@
             
             <!-- 로고 -->
             <visual name='logo'>
-                <pose>0.08 0 0.08 0 0 0</pose>
+                <pose>0.12 0 0.12 0 0 0</pose>
                 <geometry>
                     <cylinder>
-                        <radius>0.02</radius>
+                        <radius>0.03</radius>
                         <length>0.001</length>
                     </cylinder>
                 </geometry>
@@ -758,7 +790,7 @@
                 </material>
             </visual>
         </link>
-        <pose frame=''>2.5 -4.5 0.01 0 0 1.57</pose>
+        <pose frame=''>9.3 0.8 0.015 0 0 1.57</pose>
 	</model>
 	
 	<model name='Vase_01_001'>
